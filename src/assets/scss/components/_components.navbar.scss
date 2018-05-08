@@ -18,6 +18,11 @@
 	}
 }
 
+.c-navbar__nav.collapse:not(.show) {
+  @include respond-to ($breakpoint-desktop) {
+    display: block !important;
+	}
+}
 /**
  * Reduce padding of navbar when used in admin pages with sidebar.
  */
@@ -52,8 +57,8 @@
 }
 
 /**
- * Nav sits within the main navbar area. It’s fully responsive as it holds 
- * navigation items/links that will be collapsed, toggled in small 
+ * Nav sits within the main navbar area. It’s fully responsive as it holds
+ * navigation items/links that will be collapsed, toggled in small
  * screens via `c-nav-toggle` component.
  */
 
@@ -63,7 +68,7 @@
 	/**
 	 * Responsive Nav
 	 *
-	 * 1. Remove extra margin when `u-mr-auto` utility is used. 
+	 * 1. Remove extra margin when `u-mr-auto` utility is used.
 	 */
 	@include respond-to($breakpoint-tablet) {
 		position: relative;
@@ -103,7 +108,7 @@
 }
 
 
-/** 
+/**
  * 1. Allow positioning dropdown menus inside nav items.
  */
 
@@ -152,9 +157,9 @@
    ========================================================================== */
 
 /**
- * Nav toggle is the popular hamburger-like icon that would show/hide 
+ * Nav toggle is the popular hamburger-like icon that would show/hide
  * `c-navbar__nav` via javascript through bootstrap collapse plugin.
- * 
+ *
  * 1. Remove default button styles.
  * 2. Show only on small screens, hide on large screens.
  */

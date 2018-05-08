@@ -2,17 +2,17 @@
 /*!
  * Neat - v1.0
  * Copyright 2018 ZawiaStudio
- * @zawiastudio | zawiastudio.com 
+ * @zawiastudio | zawiastudio.com
  */
 
 //
 // Table of content:
-// 
+//
 // Tools........... Neat's scss mixins & functions
 // Settings........ Neat's scss variables
 // Base............ Resets, bare elements styling
-// Vendors......... Exteneral assests 
-// Objects......... Layout-specific 
+// Vendors......... Exteneral assests
+// Objects......... Layout-specific
 // Components...... UI-Kit, admin dashboard components
 // Utilities....... Helper classes e.g. display utilities
 
@@ -26,8 +26,8 @@
 
 
 //
-// SETTINGS 
-// 
+// SETTINGS
+//
 
 // Global Settings
 @import "settings/settings.global";
@@ -132,6 +132,7 @@
 @import "components/components.404";
 
 
+
 // UTILITIES
 @import "utilities/utilities.flex";
 @import "utilities/utilities.spacing";
@@ -143,3 +144,4 @@
 @import "utilities/utilities.opacity";
 @import "utilities/utilities.sizes";
 
+@import "components/components.register";

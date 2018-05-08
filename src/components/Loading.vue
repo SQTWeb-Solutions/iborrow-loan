@@ -107,7 +107,6 @@ export default {
     animation-delay: .3s
 }
 
-
 @-webkit-keyframes shift-rightwards {
     0% {
         -webkit-transform: translateX(-100%);

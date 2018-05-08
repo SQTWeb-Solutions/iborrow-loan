@@ -31,7 +31,9 @@ body {
   background-color: $body-background-color;
   overflow-x: hidden;
 }
-
+body.login-page {
+  background-color: $body-background-gray;
+}
 button,
 input,
 optgroup,
