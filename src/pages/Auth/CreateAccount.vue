@@ -10,7 +10,7 @@
                 </div>
               <h4 class="u-mb-small">Investors</h4>
               <p>A pixel-perfect design based on modern design trends with great attention to small details for better user experience.</p>
-              <router-link :to="{ name: 'auth.register.investors' }" tag="a" class="btn btn-primary ">Become an investor</router-link>
+              <router-link :to="{ name: 'auth.register.investors' }" tag="a" class="c-btn c-btn--info">Become an investor</router-link>
             </article>
           </div>
           <div class="col-md-6 col-lg-4 u-mr-auto">
@@ -20,7 +20,7 @@
                 </div>
               <h4 class="u-mb-small">Borrowers</h4>
               <p>You don't need to be a designer, we already took care of that, build your product by combining components.</p>
-              <router-link :to="{name:'auth.register.borrowers'}" class="btn btn-primary " tag="a">Become a borrower</router-link>
+              <router-link :to="{name:'auth.register.borrowers'}" class="c-btn c-btn--info" tag="a">Become a borrower</router-link>
             </article>
           </div>
         </div>

@@ -32,7 +32,7 @@
 // ========================================================================== */
 
 // Main Colors
-$color-info:      #2083FE !default; // blue
+$color-info:      #652392 !default; // blue 
 $color-success:   #2FCA74 !default; // green
 $color-warning:   #f5b848 !default; // yellow
 $color-danger:    #ED4D4D !default; // red
@@ -44,7 +44,7 @@ $color-gray: #f4f6f9 !default;
 $color-pink: #F44C67 !default; // pink
 
 // Light Colors
-$color-info-light:      #E0EBFF !default; // blue
+$color-info-light:      lighten($color-info, 30%) !default; // blue
 $color-success-light:   #DAF4E6 !default; // green
 $color-warning-light:   #FFECDA !default; // yellow
 $color-danger-light:    #FFE2E2 !default; // red
@@ -101,8 +101,8 @@ $font-weight-bold: 600 !default;
 
 // Text
 $text-small-font-size: rem(12px) !default;
-$text-font-size: rem(14px) !default;
-$text-large-font-size: rem(16px) !default;
+$text-font-size: rem(16px) !default; 
+$text-large-font-size: rem(18px) !default;
 
 $text-color: $color-ink !default;
 $text-inverse-color: $color-white !default;

@@ -1,21 +1,29 @@
 <template>
   <div class="row">
-    <div class="c-card is-animated">
-      <span class="c-icon c-icon--large u-mb-small">
-        <i class="feather icon-home"></i>
-      </span>
+    <div class="col-12">
 
-      <h5 class="u-mb-xsmall">Explore Your Dashboard</h5>
-      <p class="u-mb-medium">Start using our app by exploring the various features that our apps give you </p>
-      <a class="c-btn c-btn--info has-arrow" href="dashboard01.html">
-        Explore<i class="feather icon-chevron-right"></i>
-      </a>
+      <div class="c-card ">
+        <div class="text-center">
+          <h4>Create Borrowers Account</h4>
+          <p>Go through the follwoing steps to create an Investors account on iBorrow</p>
+        </div>
+        <hr />
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-8 col-12">
+            <borrowers-form></borrowers-form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import BorrowersForm from './BorrowersForm'
 export default {
-  name: 'register-borrowers'
+  name: 'register-borrowers',
+  components: {
+    BorrowersForm
+  }
 }
 </script>
