@@ -1,0 +1,129 @@
+// Requests
+
+.c-requests {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	border: $table-border-width solid $table-border-color;
+	border-radius: $table-border-radius;
+	background-color: $table-background-color;
+	border-collapse: collapse; /* [1] */
+	box-shadow: $card-box-shadow;
+}
+
+.c-requests__title {
+	padding: 15px;
+	border-radius: 4px 4px 0 0;
+	background-color: $table-title-background-color;
+	color: $table-title-color;
+	text-align: left;
+  width: 100%;
+  border-bottom: 1px solid $color-gray;
+	small {
+		display: inline-block;
+		color: $color-ink;
+		font-size: 14px;
+	}
+}
+
+.c-requests__body {
+  padding: 15px;
+
+  .c-request__items {
+    .c-request__item {
+      padding: .9375rem 20px .9375rem 12px;
+      border-bottom: 1px solid #e6eaee
+    }
+  }
+
+  .c-requests-item__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: .3125rem
+  }
+
+  .c-requests-item__name {
+    color: #354052;
+    font-weight: 400
+  }
+
+  .c-requests-item__username {
+    margin: 0 0 0 .3125rem;
+    color: #7f8fa4;
+    font-size: .875rem;
+    font-weight: 400
+  }
+
+  .c-requests-item__name:hover .c-requests-item__username {
+    display: inline-block;
+    text-decoration: none
+  }
+
+  .c-requests-item__time {
+    color: #7f8fa4;
+    font-size: .875rem
+  }
+
+  .c-requests-item__gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: .9375rem
+  }
+
+  .c-requests-item__gallery>img {
+    width: 49%;
+    border-radius: 4px
+  }
+
+  .c-requests-item__actionlist {
+    display: inline-block
+  }
+
+  .c-requests-item__action {
+    display: inline-block;
+    margin: 0 1.875rem 0 0;
+    color: #7f8fa4;
+    vertical-align: middle
+  }
+
+  .c-requests-item__action:hover {
+    text-decoration: none
+  }
+
+  .c-requests-item__action>i {
+    margin-right: .3125rem;
+    font-size: .875rem
+  }
+
+  .c-requests-item__actiontoggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    bottom: -.1875rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #7f8fa4
+  }
+
+  .c-requests__comment {
+    display: block;
+    margin: .625rem 0;
+    padding: .625rem;
+    border: 1px solid #e6eaee;
+    border-radius: 4px;
+    background-color: #fafbfc
+  }
+}

@@ -1,0 +1,313 @@
+/* ==========================================================================
+   #PAGE OBJECT
+   ========================================================================== */
+
+/**
+ * Use `o-page` to strucutre your page layout into sidebar, main content.
+ */
+
+.o-page {
+	position: relative;
+	height: 100%;
+
+	@include respond-to ($breakpoint-desktop) {
+		&.is-sidebar-open {
+      overflow: hidden;
+
+      .o-page__sidebar {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      }
+
+			.o-page__content {
+				height: 100vh;
+				// transform: translate3d(250px, 0, 0);
+        overflow: hidden;
+        position: relative;
+			}
+		}
+	}
+}
+
+
+/**
+ * Used with `o-page__card` for better alignment.
+ */
+
+.o-page--center {
+	padding-top: $spacer-xlarge;
+
+	@include respond-to($breakpoint-mobile) {
+		padding-top: $spacer;
+	}
+}
+
+
+/**
+ * 1. Control the width of sidebar.
+ * 2. Sidebar always on the top.
+ */
+
+.o-page__sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 250px; /* [1] */
+	height: 100%;
+  max-height: 100%;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s,-webkit-transform .2s;
+	z-index: 300;
+
+	/**
+	 * Hide sidebar once viewport is lower than $breakpoint-desktop (992px)
+	 *
+	 * 1. Increase the width of sidebar on small screens.
+	 */
+	@include respond-to($breakpoint-desktop) {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+	}
+}
+
+
+/**
+ * Page content is pushed to the right to provide space for the sidebar.
+ *
+ * 1. Must equal the width of the `o-sidebar`.
+ * 2. Adjust bootstrap `container-fluid` for proper spacing.
+ * 3. Apply a background to the maint content to match with <body> background-color.
+ */
+
+.o-page__content {
+	position: absolute;
+	right: 0;
+	left: 250px;
+	min-height: 100vh;
+	transition: transform 0.3s;
+	background-color: $body-background-color; /* [3] */
+  transform: translate3d(0, 0, 0);
+	@include respond-to($breakpoint-desktop) {
+    left: 0;
+    margin-left: 0;
+    right:0;
+	}
+}
+
+
+/**
+ * Page Card
+ *
+ * A centered page card is used when you want the card to be centered and
+ * provide a little space at the top & bottom e.g. login, 404 pages.
+ */
+
+.o-page__card {
+	width: 400px;
+	margin: 0 auto $spacer-large;
+
+	@include respond-to($breakpoint-mobile) {
+		width: 90%;
+	}
+}
+
+
+div#welcome-page {
+  height: 100vh;
+  background: #e2e8eb;
+
+}
+div.spinner-container {
+  height: 80vh;
+}
+.logo-container {
+  height: 20vh;
+  padding: 15px;
+}
+
+/*-------------------------------
+404 error
+-------------------------------*/
+.error-position {
+  margin-top: 8%;
+}
+
+
+/*  LOADING SPINNER HERE */
+
+.wdt-loading-phrases {
+  width: 350px;
+  margin: 0 auto;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.wdt-loading-phrase-category {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.wdt-loading-phrases:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  z-index: 999999;
+  background: #e2e8eb;
+  background: -moz-linear-gradient(top, #e2e8eb 0%, rgba(255, 255, 255, 0) 50%, #e2e8eb 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e8eb), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, #e2e8eb));
+  background: -webkit-linear-gradient(top, #e2e8eb 0%, rgba(255, 255, 255, 0) 50%, #e2e8eb 100%);
+  background: -o-linear-gradient(top, #e2e8eb 0%, rgba(255, 255, 255, 0) 50%, #e2e8eb 100%);
+  background: -ms-linear-gradient(top, #e2e8eb 0%, rgba(255, 255, 255, 0) 50%, #e2e8eb 100%);
+  background: linear-gradient(to bottom, #e2e8eb 0%, rgba(255, 255, 255, 0) 50%, #e2e8eb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e8eb', endColorstr='#e2e8eb', GradientType=0);
+}
+
+.wdt-loading-phrase {
+  padding-left: 30px;
+  position: relative;
+  transform: translateY(40px);
+  line-height: 30px;
+  height: 40px;
+}
+
+.wdt-loading-phrase:before {
+  content: " ";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.wdt-loading-phrase:after {
+  opacity: 0;
+  height: 11px;
+  width: 7px;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 3px solid #2EB150;
+  border-top: 3px solid #2EB150;
+  border-radius: 2.5px !important;
+  content: '';
+  left: 3px;
+  top: 16px;
+  position: absolute;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+}
+
+.wdt-loading-phrase.wdt-checked:after {
+  -webkit-animation-delay: 100ms;
+  -moz-animation-delay: 100ms;
+  animation-delay: 100ms;
+  -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  animation-duration: 200ms;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: checkmark;
+  -moz-animation-name: checkmark;
+  animation-name: checkmark;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 7px;
+    opacity: 1;
+  }
+  20% {
+    height: 2px;
+    width: 7px;
+    opacity: 1;
+  }
+  40% {
+    height: 5px;
+    width: 7px;
+    opacity: 1;
+  }
+  100% {
+    height: 11px;
+    width: 7px;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 7px;
+    opacity: 1;
+  }
+  20% {
+    height: 2px;
+    width: 7px;
+    opacity: 1;
+  }
+  40% {
+    height: 5px;
+    width: 7px;
+    opacity: 1;
+  }
+  100% {
+    height: 11px;
+    width: 7px;
+    opacity: 1;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 7px;
+    opacity: 1;
+  }
+  20% {
+    height: 2px;
+    width: 7px;
+    opacity: 1;
+  }
+  40% {
+    height: 5px;
+    width: 7px;
+    opacity: 1;
+  }
+  100% {
+    height: 11px;
+    width: 7px;
+    opacity: 1;
+  }
+}
+
+
+.affix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}

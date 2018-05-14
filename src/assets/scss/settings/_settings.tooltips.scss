@@ -1,0 +1,15 @@
+///* ========================================================================
+//   #TOOLTIPS
+//   ======================================================================== */
+
+// tooltip
+$tooltip-max-height: rem(50px) !default;
+$tooltip-padding: rem(5px) rem(7px) !default;
+$tooltip-border-radius: $base-border-radius !default;
+$tooltip-background-color: $color-ink-dark !default;
+$tooltip-color: $color-white !default;
+$tooltip-font-size: 12px !default;
+$tooltip-font-weight: $font-weight-normal !default;
+
+// tooltip arrow
+$tooltip-arrow-border-width: 6px !default;
