@@ -52,6 +52,6 @@
 <script>
 // TODO: Route the links properly to each page
 export default {
-  name: 'footer'
+  name: 'auth-footer'
 }
 </script>

@@ -11,10 +11,7 @@ module.exports = {
     useLocalIp: true,
     proxy: {
       '/api': {
-        target: 'http://loaclhost:3000',
-        ws: true,
-        pathRewrite: {'^/api': ''},
-        changeOrigin: true
+        target: 'http://localhost:3000'
       }
     },
     before: app => {

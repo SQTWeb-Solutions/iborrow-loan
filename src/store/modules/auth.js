@@ -70,7 +70,7 @@ export const actions = {
   async fetchUser ({ commit }) {
     try {
       // TODO: Connect to API to fecth the logged in user
-      const { data } = await axios.get('/api/users/me')
+      const { data } = await axios.get(`${process.env.VUE_APP_PROXY_URL}/api/users/me`)
       commit(types.FETCH_USER_SUCCESS, { user: data })
     } catch (e) {
       commit(types.FETCH_USER_FAILURE)

@@ -11,6 +11,9 @@ import VueAuthImage from 'vue-auth-image'
 import VueContentPlaceholders from 'vue-content-placeholders'
 import './registerServiceWorker'
 
+// Expose all the resources/plugins
+import './resources'
+
 import 'bootstrap/scss/bootstrap.scss'
 import 'vue-toastr/src/vue-toastr.scss'
 import '@/assets/scss/neat.scss'

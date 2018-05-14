@@ -39,7 +39,7 @@ function make () {
   // Register after hook.
   router.afterEach((to, from) => {
     router.app.$nextTick(() => {
-      // router.app.$children[0].$loading.finish()
+      router.app.$children[0].$loading.finish()
     })
   })
 
@@ -93,7 +93,7 @@ function setLayout (to) {
     router.app.$nextTick(() => {
       // Start the page loading bar.
       if (component.loading !== false) {
-        // router.app.$children[0].$loading.start()
+        router.app.$children[0].$loading.start()
       }
     })
   }
