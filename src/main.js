@@ -9,7 +9,6 @@ import VeeValidate from 'vee-validate'
 import Toastr from 'vue-toastr'
 import VueAuthImage from 'vue-auth-image'
 import VueContentPlaceholders from 'vue-content-placeholders'
-import './registerServiceWorker'
 
 // Expose all the resources/plugins
 import './resources'

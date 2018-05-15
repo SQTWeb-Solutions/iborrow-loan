@@ -3,7 +3,6 @@ import store from '@/store'
 import router from '@/router'
 
 // default axios information
-console.log(`hello ${process.env.VUE_APP_PROXY_URL}`)
 axios.defaults.baseURL = process.env.VUE_APP_PROXY_URL
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 // Request interceptor
