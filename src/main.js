@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import store from './store/index'
 import router from './router/index'
-
+import './registerServiceWorker'
 // set up extend layout option for the vue
 import { VueExtendLayout, layout } from 'vue-extend-layout'
 import VeeValidate from 'vee-validate'

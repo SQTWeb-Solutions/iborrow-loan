@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[0],{JCP4:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("router-view")},o=[],s={name:"investors-onboard"},u=s,a=t("KHd+"),l=Object(a["a"])(u,r,o,!1,null,null,null);n["default"]=l.exports}}]);
+//# sourceMappingURL=0.bd14ab26.js.map

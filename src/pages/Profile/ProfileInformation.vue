@@ -31,7 +31,7 @@ export default {
       // Dispatch an action to fetch the user information in case it doesn't exist before
       await this.$store.dispatch('auth/fetchUser')
       this.user = this.$store.getters['auth/user']
-      this.profileImage = `${process.env.API_URL}/${this.$store.getters['auth/user'].profileImageURL}`
+      this.profileImage = `${process.env.VUE_APP_PROXY_URL}/${this.$store.getters['auth/user'].profileImageURL}`
       this.loadedUser = true
     }
   }
