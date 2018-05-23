@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[5],{UjNt:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("router-view")},l=[],o={name:"borrowings-template"},u=o,a=t("KHd+"),s=Object(a["a"])(u,r,l,!1,null,null,null);n["default"]=s.exports}}]);
-//# sourceMappingURL=5.23e4c828.js.map

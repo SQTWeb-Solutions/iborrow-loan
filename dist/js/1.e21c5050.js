@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[1],{SOOw:function(e,n,r){"use strict";r.r(n);var o=function(){var e=this,n=e.$createElement,r=e._self._c||n;return r("router-view")},t=[],u={name:"borrowers-onboard"},a=u,l=r("KHd+"),s=Object(l["a"])(a,o,t,!1,null,null,null);n["default"]=s.exports}}]);
-//# sourceMappingURL=1.e21c5050.js.map

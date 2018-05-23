@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[6],{ifcs:function(e,n,t){"use strict";t.r(n);var o=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("router-view")},r=[],c={name:"welcome-onboard"},l=c,u=t("KHd+"),a=Object(u["a"])(l,o,r,!1,null,null,null);n["default"]=a.exports}}]);
-//# sourceMappingURL=6.55a026b7.js.map
