@@ -14,8 +14,8 @@ export default [
       children: [
         { path: '', redirect: { name: 'auth.login' } },
         { path: 'login', name: 'auth.login', component: require('@/pages/Auth/Login').default, meta: { layout: 'auth' } },
-        { path: 'register/investors', name: 'auth.register.investors', component: require('@/pages/Auth/Register/Investors').default, meta: { layout: 'registration' } },
-        { path: 'register/borrowers', name: 'auth.register.borrowers', component: require('@/pages/Auth/Register/Borrowers').default, meta: { layout: 'registration' } },
+        { path: 'register/investor', name: 'auth.register.investors', component: require('@/pages/Auth/Register/Investors').default, meta: { layout: 'registration' } },
+        { path: 'register/borrower', name: 'auth.register.borrowers', component: require('@/pages/Auth/Register/Borrowers').default, meta: { layout: 'registration' } },
         { path: 'register/error', name: 'auth.register.error', component: require('@/pages/Auth/Register/Error').default, meta: { layout: 'auth' } },
         { path: 'register/confirm/verified', name: 'auth.register.confirmation.error', component: require('@/pages/Auth/Register/ConfirmError').default, meta: { layout: 'auth' } },
         { path: 'register/success/:email', name: 'auth.register.success', component: require('@/pages/Auth/Register/Success').default, meta: { layout: 'auth' } },

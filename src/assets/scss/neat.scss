@@ -13,16 +13,16 @@
 // Base............ Resets, bare elements styling
 // Vendors......... Exteneral assests
 // Objects......... Layout-specific
-// Components...... UI-Kit, admin dashboard components
-// Utilities....... Helper classes e.g. display utilities
+// ..... UI-Kit, admin dashboard components
+// ...... Helper classes e.g. display utilities
 
 
 //
 // TOOLS
 //
-@import "tools/tools.linear-gradient";
-@import "tools/tools.rem";
-@import "tools/tools.respond-to";
+@import "tools/linear-gradient";
+@import "tools/rem";
+@import "tools/respond-to";
 
 
 //
@@ -30,61 +30,55 @@
 //
 
 // Global Settings
-@import "settings/settings.global";
+@import "settings/global";
 
 // UI-Kit Settings
-@import "settings/settings.alert";
-@import "settings/settings.avatar";
-@import "settings/settings.badge";
-@import "settings/settings.buttons";
-@import "settings/settings.card";
-@import "settings/settings.choice";
-@import "settings/settings.divider";
-@import "settings/settings.dropdown";
-@import "settings/settings.field";
-@import "settings/settings.icon";
-@import "settings/settings.inputs";
-@import "settings/settings.modal";
-@import "settings/settings.navbar";
-@import "settings/settings.pagination";
-@import "settings/settings.progress";
-@import "settings/settings.select";
-@import "settings/settings.sidebar";
-@import "settings/settings.switch";
-@import "settings/settings.tables";
-@import "settings/settings.tabs";
-@import "settings/settings.toolbar";
-@import "settings/settings.tooltips";
-@import "settings/settings.close";
-@import "settings/settings.range";
+@import "settings/alert";
+@import "settings/avatar";
+@import "settings/badge";
+@import "settings/buttons";
+@import "settings/card";
+@import "settings/choice";
+@import "settings/divider";
+@import "settings/dropdown";
+@import "settings/field";
+@import "settings/icon";
+@import "settings/inputs";
+@import "settings/modal";
+@import "settings/navbar";
+@import "settings/pagination";
+@import "settings/progress";
+@import "settings/select";
+@import "settings/sidebar";
+@import "settings/switch";
+@import "settings/tables";
+@import "settings/tabs";
+@import "settings/toolbar";
+@import "settings/tooltips";
+@import "settings/close";
+@import "settings/range";
 
 
 //
 // BASE
 //
-@import "base/base.global";
-@import "base/base.typography";
+@import "base/global";
+@import "base/typography";
 
 
 //
 // VENDORS
 //
 @import "vendor/bootstrap-grid";
-@import "vendor/fullcalendar";
-@import "vendor/fullcalendar-custom"; // override fullcalendar default styles
 @import "vendor/feather";
-@import "vendor/dragula";
-@import "vendor/chartist";
-@import "vendor/chartist-plugin-tooltip";
-@import "vendor/chartist-plugin-tooltip-custom"; // override chartist tooltip default styles
 
 
 //
 // OBJECTS
 //
-@import "objects/objects.page";
-@import "objects/objects.media";
-@import "objects/objects.line";
+@import "objects/page";
+@import "objects/media";
+@import "objects/line";
 
 
 //
@@ -92,61 +86,61 @@
 //
 
 // UI-Kit Components
-@import "components/components.alert";
-@import "components/components.avatar";
-@import "components/components.badge";
-@import "components/components.breadcrumb";
-@import "components/components.buttons";
-@import "components/components.card";
-@import "components/components.choice";
-@import "components/components.divider";
-@import "components/components.dropdown";
-@import "components/components.field";
-@import "components/components.footer";
-@import "components/components.icon";
-@import "components/components.inputs";
-@import "components/components.modal";
-@import "components/components.navbar";
-@import "components/components.note";
-@import "components/components.notification";
-@import "components/components.pagination";
-@import "components/components.pipeline";
-@import "components/components.post";
-@import "components/components.progress";
-@import "components/components.requests";
-@import "components/components.scard";
-@import "components/components.search";
-@import "components/components.select";
-@import "components/components.sidebar";
-@import "components/components.stream";
-@import "components/components.switch";
-@import "components/components.tables";
-@import "components/components.tabs";
-@import "components/components.text";
-@import "components/components.toolbar";
-@import "components/components.tooltips";
-@import "components/components.close";
-@import "components/components.range";
+@import "components/alert";
+@import "components/avatar";
+@import "components/badge";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/card";
+@import "components/choice";
+@import "components/divider";
+@import "components/dropdown";
+@import "components/field";
+@import "components/footer";
+@import "components/icon";
+@import "components/inputs";
+@import "components/modal";
+@import "components/navbar";
+@import "components/note";
+@import "components/notification";
+@import "components/pagination";
+@import "components/pipeline";
+@import "components/post";
+@import "components/progress";
+@import "components/requests";
+@import "components/scard";
+@import "components/search";
+@import "components/select";
+@import "components/sidebar";
+@import "components/stream";
+@import "components/switch";
+@import "components/tables";
+@import "components/tabs";
+@import "components/text";
+@import "components/toolbar";
+@import "components/tooltips";
+@import "components/close";
+@import "components/range";
 
 // Dashboard specifc-components
-@import "components/components.state-card";
-@import "components/components.feed";
-@import "components/components.chart";
-@import "components/components.plan";
-@import "components/components.invoice";
-@import "components/components.404";
+@import "components/state-card";
+@import "components/feed";
+@import "components/chart";
+@import "components/plan";
+@import "components/invoice";
+@import "components/404";
 
 
 
 // UTILITIES
-@import "utilities/utilities.flex";
-@import "utilities/utilities.spacing";
-@import "utilities/utilities.typography";
-@import "utilities/utilities.colors";
-@import "utilities/utilities.display";
-@import "utilities/utilities.borders";
-@import "utilities/utilities.responsive";
-@import "utilities/utilities.opacity";
-@import "utilities/utilities.sizes";
+@import "utilities/flex";
+@import "utilities/spacing";
+@import "utilities/typography";
+@import "utilities/colors";
+@import "utilities/display";
+@import "utilities/borders";
+@import "utilities/responsive";
+@import "utilities/opacity";
+@import "utilities/sizes";
 
-@import "components/components.register";
+@import "components/register";
