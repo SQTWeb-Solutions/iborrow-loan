@@ -1,53 +1,51 @@
 <template>
-  <div>
-    <form @submit.prevent="login" metho="post">
-      <div class="alert alert-danger alert-dismissible fade show" role="alert" v-if="hasError">
-          <strong>Error!</strong> <br />
-          {{errorMessage}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">×</span>
-          </button>
-      </div>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert" v-if="notVerified">
-          <strong>Notice!</strong>
-          <br />
-          Your account is not verified, please check you email for verification link, if you can receive the link <a class="alert-link" @click.prevent="resendToken" href="#" >Click to resend token</a>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">×</span>
-          </button>
-      </div>
-      <div class="alert alert-success alert-dismissible fade show" role="alert" v-if="success">
-          <strong>Success!</strong>
-          <br />
-          {{successMessage}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">×</span>
-          </button>
-      </div>
-      <div class="c-field">
-        <label class="c-field__label">Email Address/username</label>
-        <input class="c-input u-mb-small" v-model="username" type="text" name="username" v-validate="'required'" placeholder="e.g. adam@sandler.com" required>
-        <alert-danger :text="errors.first('username')" :active="errors.has('username')"></alert-danger>
-      </div>
-
-      <div class="c-field">
-        <label class="c-field__label">Password</label>
-        <input class="c-input u-mb-small" type="password" name="password" v-model="password" v-validate="'required'" placeholder="Numbers, Pharagraphs Only" required>
-        <alert-danger :text="errors.first('password')" :active="errors.has('password')"></alert-danger>
-      </div>
-      <router-link :to="{ name: 'auth.password.forgot' }" class="mb-2 d-flex">Forgot Password?</router-link>
-      <button class="c-btn c-btn--fullwidth c-btn--info" :disabled="loading"><font-awesome-icon icon="spinner" spin  v-if="loading" /> {{ loading ? 'Processing' : 'Log me in' }}</button>
-    </form>
+<form method="post" @submit.prevent="login">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert" v-if="hasError">
+    <strong>Error!</strong> <br />
+    {{errorMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
   </div>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" v-if="notVerified">
+    <strong>Notice!</strong>
+    <br />
+    Your account is not verified, please check you email for verification link, if you can receive the link <a class="alert-link" @click.prevent="resendToken" href="#" >Click to resend token</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="alert alert-success alert-dismissible fade show" role="alert" v-if="success">
+    <strong>Success!</strong>
+    <br />
+    {{successMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="c-field u-mb-small">
+    <label class="c-field__label" for="username">Email Address/username</label>
+    <input class="c-input" :class="{ 'c-input--danger': errors.has('username') }" v-model="username"  name="username" v-validate="'required'" type="text" id="username" placeholder="clark@iborrow.com">
+    <form-error :caption="errors.first('username')" v-if="errors.has('username')"></form-error>
+  </div>
+
+  <div class="c-field u-mb-small">
+    <label class="c-field__label" for="password">Password</label>
+    <input class="c-input " type="password" id="password" v-model="password"  name="password" v-validate="'required'" :class="{ 'c-input--danger': errors.has('password') }" placeholder="Numbers, Letters...">
+    <form-error :caption="errors.first('password')" v-if="errors.has('password')"></form-error>
+  </div>
+  <router-link :to="{ name: 'auth.password.forgot' }" class="mb-2 d-flex">Forgot Password?</router-link>
+  <button class="c-btn c-btn--fancy c-btn--fullwidth" type="submit" :disabled="loading"><font-awesome-icon icon="spinner" spin  v-if="loading" /> {{ loading ? 'Processing' : 'Sign in to Dashboard' }}</button>
+</form>
 </template>
 <script>
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import axios from 'axios'
-import AlertDanger from '@/components/AlertDanger'
+import FormError from '@/components/FormError'
 export default {
   name: 'login-form',
   components: {
-    AlertDanger,
+    FormError,
     FontAwesomeIcon
   },
   data () {

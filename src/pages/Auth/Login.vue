@@ -1,16 +1,15 @@
 <template>
-  <div class="o-page o-page--center">
-    <div class="o-page__card">
-      <div class="c-card c-card--center">
-        <a :href="websiteUrl" class="c-icon c-icon--large u-mb-small">
-          <img src="@/assets/img/logo.png" alt="iBorrrow">
-        </a>
-
-        <h4 class="u-mb-medium">Welcome Back :)</h4>
-        <login-form></login-form>
-        <hr />
-        <router-link :to="{ name: 'auth.create.account' }" class="btn-link" >Not yet a member? Create an acount</router-link>
-      </div>
+  <div class="c-card u-mb-xsmall">
+    <header class="c-card__header u-pt-large">
+      <a class="c-card__icon" href="/">
+        <img src="@/assets/img/logo.png" alt="iBorrow">
+      </a>
+      <h1 class="u-h3 u-text-center u-mb-zero">Welcome back :).</h1>
+    </header>
+    <div class="c-card__body">
+      <login-form></login-form>
+      <span class="c-divider c-divider--small has-text u-mv-medium">Not yet a member?</span>
+      <router-link tag="a" :to="{ name: 'auth.create.account' }" class="c-btn c-btn--secondary c-btn--fullwidth"> Create an acount</router-link>
     </div>
   </div>
 

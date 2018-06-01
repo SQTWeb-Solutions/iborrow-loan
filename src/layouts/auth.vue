@@ -1,8 +1,10 @@
 <template>
   <transition name="page" mode="out-in">
-    <div id="app">
+    <div id="app" class="main-page-wrapper">
       <loading ref="loading"></loading>
-      <router-view/>
+      <div class="o-page__card">
+        <router-view/>
+      </div>
     </div>
   </transition>
 </template>
@@ -19,7 +21,7 @@ export default {
       title: 'Authentication',
       titleTemplate: '%s · iBorrow',
       htmlAttrs: { lang: 'en', dir: 'ltr' },
-      bodyAttrs: { class: 'login-page' },
+      bodyAttrs: { class: 'o-page o-page--center' },
       noscript: [ { innerHTML: 'This website requires JavaScript.' } ]
     }
   },

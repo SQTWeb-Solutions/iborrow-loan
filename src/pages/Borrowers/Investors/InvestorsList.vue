@@ -90,7 +90,6 @@ export default {
           this.page = (data.current === data.pages) ? Number(data.current) : Number(data.current) + 1
           // eslint-disable-next-line
           this.end = (data.current === data.pages) ? true : false
-          console.log(this.end)
           this.loading = false
         }
       } catch (e) {
